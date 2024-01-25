@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Grk-3x-b8K">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Grk-3x-b8K" customClass="SpringButton" customModule="SpringAnimation">
                                 <rect key="frame" x="60" y="835" width="310" height="38"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -24,8 +24,11 @@
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                                     <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="startSpringAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R2U-cn-exH"/>
+                                </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ISU-6t-vZR">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ISU-6t-vZR" customClass="SpringView" customModule="SpringAnimation">
                                 <rect key="frame" x="60" y="83" width="310" height="144"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="V1a-nV-Cfo">
@@ -71,6 +74,22 @@
                                     <constraint firstItem="V1a-nV-Cfo" firstAttribute="top" secondItem="ISU-6t-vZR" secondAttribute="top" constant="11" id="VMt-bm-Ixv"/>
                                     <constraint firstItem="V1a-nV-Cfo" firstAttribute="leading" secondItem="ISU-6t-vZR" secondAttribute="leading" constant="8" id="mHn-nR-nab"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="squeezeUp"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="curve" value="easeOut"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="0.81999999999999995"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                        <real key="value" value="1.24"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -84,6 +103,14 @@
                             <constraint firstItem="ISU-6t-vZR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="s7K-Xs-ere"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="curveLabel" destination="oEs-Mz-SHF" id="QeX-1k-Lhc"/>
+                        <outlet property="delayLabel" destination="jjd-0d-u6b" id="9En-dc-rPt"/>
+                        <outlet property="durationLabel" destination="uKn-P6-3Bu" id="tJF-LJ-wv5"/>
+                        <outlet property="forceLabel" destination="jce-8Y-lg6" id="ndb-hs-9b4"/>
+                        <outlet property="presetLabel" destination="FAe-eA-hrM" id="P4x-Az-0fj"/>
+                        <outlet property="springAnimationView" destination="ISU-6t-vZR" id="hOe-sb-j1z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
