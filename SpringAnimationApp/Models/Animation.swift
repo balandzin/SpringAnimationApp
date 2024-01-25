@@ -16,12 +16,12 @@ struct Animation {
     
     static func getAnimation() -> Animation {
         let dataStore = DataStore.shared
-        
+                
         let preset = dataStore.presets[Int.random(in: 0..<dataStore.presets.count)]
         let curve = dataStore.curves[Int.random(in: 0..<dataStore.curves.count)]
-        let force = Double.random(in: 1...3)
-        let duration = Double.random(in: 0.5...5)
-        let delay = Double.random(in: 0...1)
+        let force = round(Double.random(in: 1...2) * 100) / 100
+        let duration = round(Double.random(in: 0.5...2) * 100) / 100
+        let delay = round(Double.random(in: 0...1) * 100) / 100
         
         let animation = Animation(
             preset: preset,

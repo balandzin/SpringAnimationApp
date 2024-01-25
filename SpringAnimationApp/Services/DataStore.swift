@@ -73,6 +73,5 @@ final class DataStore {
         "easeInOutBack"
     ]
     
-    
     private init() {}
 }
