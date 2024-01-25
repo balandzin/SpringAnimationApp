@@ -98,7 +98,6 @@
                         <outlet property="durationLabel" destination="uKn-P6-3Bu" id="tJF-LJ-wv5"/>
                         <outlet property="forceLabel" destination="jce-8Y-lg6" id="ndb-hs-9b4"/>
                         <outlet property="presetLabel" destination="FAe-eA-hrM" id="P4x-Az-0fj"/>
-                        <outlet property="runButton" destination="Grk-3x-b8K" id="lYR-5E-wHH"/>
                         <outlet property="springAnimationView" destination="ISU-6t-vZR" id="hOe-sb-j1z"/>
                     </connections>
                 </viewController>
