@@ -62,12 +62,12 @@
 		D34FC36E2B627A55000D5BD8 /* SpringAnimationApp */ = {
 			isa = PBXGroup;
 			children = (
-				D34FC3872B627D98000D5BD8 /* App */,
 				D34FC3862B627D70000D5BD8 /* ViewControllers */,
 				D34FC3882B627DF7000D5BD8 /* Storyboards */,
-				D34FC3892B627E0A000D5BD8 /* Resources */,
 				D34FC38C2B627E39000D5BD8 /* Models */,
 				D34FC38F2B627F40000D5BD8 /* Services */,
+				D34FC3872B627D98000D5BD8 /* App */,
+				D34FC3892B627E0A000D5BD8 /* Resources */,
 			);
 			path = SpringAnimationApp;
 			sourceTree = "<group>";
